@@ -2,19 +2,24 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginLeft="1dp"
-    android:layout_marginRight="1dp"
+
     android:gravity="center_vertical"
         android:id="@+id/linearLayoutRaiz"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="0dp">
 
     <ImageView
+
         android:id="@+id/imagemCapaAlbum"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
         android:visibility="visible"
-        app:srcCompat="@android:drawable/ic_menu_gallery" />
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:layout_marginRight="6dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,6 +52,7 @@
     </LinearLayout>
 
     <ImageButton
+        android:layout_marginLeft="6dp"
         android:id="@+id/imageButtonOpcoesMusica"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

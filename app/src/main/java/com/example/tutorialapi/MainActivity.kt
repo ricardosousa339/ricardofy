@@ -1,11 +1,13 @@
 package com.example.tutorialapi
 
 import MusicaAdapter
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
@@ -24,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: MusicaAdapter
     private lateinit var imageView: ImageView
     private lateinit var imageViewAvatar: ImageView
+    private lateinit var drawable: Drawable
+    private lateinit var view: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         //Definicoes
         imageView = findViewById(R.id.imagemCapaPlaylist)
-
-        val drawable = ResourcesCompat.getDrawable(resources, R.drawable.gradientbg, null)
-        val view = window.decorView
+        drawable = ResourcesCompat.getDrawable(resources, R.drawable.gradientbg, null)!!
+        view = window.decorView
         //view.background = drawable
 
-        //Definicoes
         recyclerView = findViewById(R.id.recyclerViewMusicas)
         adapter = MusicaAdapter()
         recyclerView.adapter = adapter
@@ -56,8 +58,6 @@ class MainActivity : AppCompatActivity() {
 
 
         getData()
-
-
 
     }
 
